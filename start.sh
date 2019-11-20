@@ -12,20 +12,20 @@ export LANG=ja_JP.utf8
 #3) Install  Mattermost
 #4) Exit and Cancel
 
-select VAR in Install Mastodon 3.0 Install  Gitlab Install  Mattermost Exit and Cancel
+select VAR in InstallMastodon3.0 InstallGitlab InstallMattermost Exit
 
 do
       echo "You Choose $VAR !"
-         if [ "$VAR" = "Install Mastodon 3.0" ]; then
+         if [ "$VAR" = "InstallMastodon3.0" ]; then
            sh Mastodon.sh
          fi
-         if [ "$VAR" = "Install  Gitlab" ]; then
+         if [ "$VAR" = "InstallGitlab" ]; then
            sh Gitlab.sh
          fi
-         if [ "$VAR" = "Install  Mattermost" ]; then
+         if [ "$VAR" = "InstallMattermost" ]; then
            sh Mattermost.sh
          fi
-        if [ "$VAR" = "Exit and Cancel" ]; then
+        if [ "$VAR" = "Exit" ]; then
             break
           fi
 done
