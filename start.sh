@@ -17,7 +17,7 @@ select VAR in InstallMastodon3.0 InstallGitlab InstallMattermost Exit
 do
       echo "You Choose $VAR !"
          if [ "$VAR" = "InstallMastodon3.0" ]; then
-           sh Mastodon.sh
+           break
          fi
          if [ "$VAR" = "InstallGitlab" ]; then
            sh Gitlab.sh
