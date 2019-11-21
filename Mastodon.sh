@@ -5,6 +5,8 @@ echo "----------------------------------"
 echo "Clapp_project Ex-potato"
 echo "Mastodon3 Installer"
 echo "----------------------------------"
+export LANG=ja_JP.utf8
+
 echo -n "OSバージョンを入力してください"
 read OSV
 case $OSV in
