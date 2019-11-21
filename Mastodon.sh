@@ -6,6 +6,17 @@ echo "Clapp_project Ex-potato"
 echo "Mastodon3 Installer"
 echo "----------------------------------"
 
+read OSV
+case $OSV in
+   7)
+    echo "インストーラーを起動します..."
+   return 0
+    ;;
+   6)
+   echo "インストーラーが対応していません"
+  exit1
+   ;;
+esac
 ask_basic_info_recursively(){
   echo
   echo -n "マストドンのドメイン名: "
@@ -300,6 +311,6 @@ echo "$((${R} % 60)) $((${R} % 24)) * * $((${R} % 7)) root ${CPATH}/certbot-auto
 # reboot
 shutdown -r 1
 
-echo "スタートアップスクリプトが正常に完了しました"
+echo "スクリプトが正常に完了しました"
 
 exit 0
