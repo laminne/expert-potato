@@ -5,15 +5,15 @@ echo "----------------------------------"
 echo "Clapp_project Ex-potato"
 echo "Mastodon3 Installer"
 echo "----------------------------------"
-
+echo -n "OSバージョンを入力してください"
 read OSV
 case $OSV in
    7)
-    echo "インストーラーを起動します..."
+    echo -n "インストーラーを起動します..."
    return 0
     ;;
    6)
-   echo "インストーラーが対応していません"
+   echo -n "インストーラーが対応していません"
   exit1
    ;;
 esac
@@ -25,10 +25,10 @@ ask_basic_info_recursively(){
   read MADDR
  echo -n "MastodonのGitリポジトリ"
   read GIT
-  echo "【設定】"
-  echo "  ドメイン: "$DOMAIN
-  echo "  メール　: "$MADDR
-  echo "  Gitリポジトリ:" $GIT
+  echo -n "【設定】"
+  echo -n "  ドメイン: "$DOMAIN
+  echo -n "  メール　: "$MADDR
+  echo  -n "  Gitリポジトリ:" $GIT
   echo -n "上記内容でインストールしますか？ (y/n/q): "
   read install_answer
   case $install_answer in
