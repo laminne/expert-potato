@@ -3,5 +3,9 @@
 echo "---------------------------"
 echo "Gitlab Installer"
 echo "---------------------------"
+set -x
+echo "starting install..."
 
-echo " new massage!!!"
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+echo "Start install..."
+sudo yum install -y gitlab-ce
