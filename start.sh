@@ -7,22 +7,22 @@ echo "Kantan-Installer Ver 1.0"
 echo "インストールするものを選んでください"
 export LANG=ja_JP.utf8
 
-#1) Install Mastodon 3.0
-#2) Install  Gitlab
-#3) Install  Mattermost
+#1) Mastodon 3.0
+#2) Gitlab
+#3) Mattermost
 #4) Exit and Cancel
 
-select VAR in InstallMastodon3.0 InstallGitlab InstallMattermost Exit
+select VAR in Mastodon3.0 Gitlab Mattermost Exit
 
 do
-      echo "You Choose $VAR !"
-         if [ "$VAR" = "InstallMastodon3.0" ]; then
+      echo "$VAR !"
+         if [ "$VAR" = "Mastodon3.0" ]; then
            sh Mastodon.sh
          fi
-         if [ "$VAR" = "InstallGitlab" ]; then
+         if [ "$VAR" = "Gitlab" ]; then
            sh Gitlab.sh
          fi
-         if [ "$VAR" = "InstallMattermost" ]; then
+         if [ "$VAR" = "Mattermost" ]; then
            sh Mattermost.sh
          fi
         if [ "$VAR" = "Exit" ]; then
