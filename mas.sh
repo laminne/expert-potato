@@ -296,15 +296,6 @@ firewall-cmd --permanent --add-port={25,80,443}/tcp
 firewall-cmd --reload
 
 #Lets Encrypt
-CPATH=/usr/local/certbot
-git clone https://github.com/certbot/certbot ${CPATH}
-WROOT=/usr/share/nginx/html
-${CPATH}/certbot-auto -n certonly --webroot -w ${WROOT} -d ${DOMAIN} -m ${MADDR} --agree-tos --server https://acme-v02.api.letsencrypt.org/directory
-
-if [ ! -f ${CERT} ]; then
-    echo "証明書の取得に失敗しました"
-    exit 1
-fi
 
 mv https.conf /etc/nginx/conf.d/
 R=${RANDOM}
