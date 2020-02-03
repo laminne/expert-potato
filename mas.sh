@@ -11,7 +11,7 @@ echo -n "OSバージョンを入力してください"
 read OSV
 case $OSV in
    7)
-    echo -n "インストーラーを起動します..."
+    echo -n "start install..."
    return 0
     ;;
    6)
@@ -21,24 +21,24 @@ case $OSV in
 esac
 ask_basic_info_recursively(){
   echo
-  echo -n "マストドンのドメイン名: "
+  echo -n "Your domain name: "
   read DOMAIN
-  echo -n "SSL証明書の更新通知先メールアドレス: "
+  echo -n "SSL: "
   read MADDR
- echo -n "MastodonのGitリポジトリ"
+ echo -n "Git repo"
   read GIT
   echo -n "【設定】"
   echo -n "  ドメイン: "$DOMAIN
   echo -n "  メール　: "$MADDR
   echo  -n "  Gitリポジトリ:" $GIT
-  echo -n "上記内容でインストールしますか？ (y/n/q): "
+  echo -n "this is OK? (y/n/q): "
   read install_answer
   case $install_answer in
     y)
       return 0
       ;;
     q)
-      echo "インストールをキャンセルしました."
+      echo "stop install"
       exit
       ;;
     *)
