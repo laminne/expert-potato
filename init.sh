@@ -10,7 +10,7 @@ echo e.g) 153
 read num
 
 echo Ok. Checking recipe server....
-wget https://clappdon.work/repos/amagasa/recipe/$num
+wget https://clappdon.work/repos/amagasa/recipe/$num/start.sh
 echo Checking Finished.
 echo Finish This Script....
 sh repo.sh
