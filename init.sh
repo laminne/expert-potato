@@ -6,7 +6,7 @@ echo "------------------------------------------------"
 echo .
 echo .
 echo Select installer number:
-echo e.g) 153
+echo e.g. 153
 read num
 
 echo Ok. Checking recipe server....
